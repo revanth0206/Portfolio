@@ -87,7 +87,7 @@ const Contact = () => (
               {/* Links */}
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="https://linkedin.com/in/revanthbethu"
+                  href="https://www.linkedin.com/in/revanth-bethu/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-secondary"
