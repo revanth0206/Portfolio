@@ -129,7 +129,7 @@ const Contact = () => (
       {/* Footer */}
       <div className="mt-20 pt-8 text-center" style={{ borderTop: '1px solid var(--border)' }}>
         <p className="text-xs" style={{ color: 'var(--text-muted)' }}>
-          © {new Date().getFullYear()} Revanth Bethu. Built with React + TypeScript. Hosted on Netlify.
+          © {new Date().getFullYear()} Revanth Bethu.
         </p>
       </div>
     </div>
