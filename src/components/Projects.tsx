@@ -2,20 +2,36 @@ import ScrollReveal from './ScrollReveal';
 
 const projects = [
   {
+    title: 'BAPL AI Agent Architecture',
+    subtitle: 'Copilot Studio · Power Automate · Graph Connectors · Entra ID',
+    image: null,
+    liveUrl: null,
+    description:
+      'Designing and deploying 10+ AI agents for a consulting firm — each one scoped to a specific business function (HR, finance, service delivery, analytics). The tricky part: all company knowledge lives in Google Drive, so I\'m building the data pipeline through Graph Connectors into Microsoft 365, with folder-level isolation so each agent only sees what it should. Security is handled through Entra ID groups.',
+    outcomes: [
+      'Architected a scalable pattern: one connector per agent, scoped to specific folder IDs',
+      'Designed role-based access control so only the right team can use each agent',
+      'Planning agent-to-agent orchestration via Power Automate for cross-functional handoffs',
+      'Built a learning framework and documentation set for the entire project',
+    ],
+    tags: ['Copilot Studio', 'Power Automate', 'Graph Connectors', 'Entra ID', 'Google Cloud'],
+    featured: true,
+  },
+  {
     title: 'Q Labour Group — Company Website',
     subtitle: 'AI-Assisted Development · Web Design · Dynamic Forms',
     image: null,
     liveUrl: 'https://qlabourgroup.com.au/',
     description:
-      'Developed the complete company website for Q Labour Group (OZWIND\'s parent company) using AI-assisted workflows. Designed and launched the site within a single day, integrating dynamic forms for lead capture and expression of interest collection.',
+      'Built a full company website in a single day using AI-assisted workflows. Not a template — a proper site with dynamic forms for lead capture and expression of interest collection. It went from "we need a website" to live in under 24 hours.',
     outcomes: [
-      'Built and deployed a production website in just 1 day using AI-assisted development',
-      'Captured 120+ expressions of interest within the first month of launch',
-      'Integrated dynamic forms streamlining client and candidate onboarding',
+      'Designed, built, and deployed in just 1 day with AI-assisted development',
+      '120+ expressions of interest captured in the first month',
+      'Dynamic forms streamlined both client and candidate onboarding',
       'Established online presence across Brisbane, Gold Coast & Sunshine Coast',
     ],
-    tags: ['AI-Assisted Development', 'Web Design', 'Dynamic Forms', 'Lead Generation'],
-    featured: true,
+    tags: ['AI-Assisted Dev', 'Web Design', 'Lead Generation'],
+    featured: false,
   },
   {
     title: 'Customer Support Cases Dashboard',
@@ -23,13 +39,13 @@ const projects = [
     image: '/images/project-support-dashboard.png',
     liveUrl: null,
     description:
-      'Analysed 10,000+ support tickets to uncover resolution trends by severity, region, and support tier. Built drill-through visuals and dynamic filtering to empower stakeholders with self-service insights.',
+      'Dug into 10,000+ support tickets to find where things were breaking down — which severity levels were bottlenecked, which regions were underserved, and where escalation paths were failing. Built drill-through visuals so managers could self-serve instead of asking me every time.',
     outcomes: [
-      'Identified backlog bottlenecks across quarterly cycles',
+      'Found quarterly backlog patterns that nobody had noticed',
       'Proposed escalation redesigns projected to cut response times by 15–20%',
-      'Delivered a self-service analytics model for managers to monitor KPIs',
+      'Gave managers a self-service dashboard so they could stop waiting on reports',
     ],
-    tags: ['Power BI', 'DAX', 'Data Analysis', 'Stakeholder Reporting'],
+    tags: ['Power BI', 'DAX', 'Data Analysis'],
     featured: false,
   },
   {
@@ -38,13 +54,13 @@ const projects = [
     image: '/images/project-marketing-dashboard.png',
     liveUrl: null,
     description:
-      'Built a comprehensive web marketing dashboard tracking 418K+ sessions, bounce rates, pageviews, and device breakdowns. Provided multi-tab navigation for cockpit views, sessions, pageviews, and load time analysis.',
+      'Tracked 418K+ sessions worth of web traffic — bounce rates, pageviews, device breakdowns, the works. Multi-tab dashboard with cockpit views for quick decisions and deep-dive tabs for when the marketing team wanted specifics.',
     outcomes: [
       'Tracked 325K+ unique pageviews across desktop, mobile, and tablet',
-      'Identified top-performing pages and geographic traffic distribution',
-      'Enabled data-driven content and channel optimisation decisions',
+      'Pinpointed the top-performing pages and where traffic was actually coming from',
+      'Gave the marketing team data to back their content and channel decisions',
     ],
-    tags: ['Power BI', 'Web Analytics', 'Marketing', 'KPI Dashboards'],
+    tags: ['Power BI', 'Web Analytics', 'Marketing'],
     featured: false,
   },
   {
@@ -53,13 +69,13 @@ const projects = [
     image: '/images/project-sales-dashboard.png',
     liveUrl: null,
     description:
-      'Designed a sales performance dashboard covering $1.35M+ in total sales across NSW and Victoria. Analysed profit margins by city, sales by team, category breakdowns, and year-over-year trends.',
+      'Analysed $1.35M+ in sales across NSW and Victoria — profit margins by city, team performance, category breakdowns, and year-over-year trends. The goal: find where money was being made and where it was being quietly lost.',
     outcomes: [
-      'Revealed $325K total profit with 12.7% overall margin across regions',
-      'Identified top-performing teams and employees driving revenue',
-      'Surfaced loss-making locations for strategic cost review',
+      'Revealed $325K total profit with 12.7% margin across regions',
+      'Identified which teams and employees were actually driving revenue',
+      'Surfaced loss-making locations that needed a strategic rethink',
     ],
-    tags: ['Power BI', 'Sales Analytics', 'Profit Analysis', 'Business Intelligence'],
+    tags: ['Power BI', 'Sales Analytics', 'Business Intelligence'],
     featured: false,
   },
 ];
@@ -70,10 +86,11 @@ const Projects = () => (
       <ScrollReveal>
         <span className="section-label">Projects</span>
         <h2 className="section-heading mb-4">
-          Work that <span className="heading-italic">speaks for itself</span>
+          Stuff I've{' '}
+          <span className="heading-italic">actually built</span>
         </h2>
         <p className="section-subtext mb-16">
-          From full websites built in a day with AI to dashboards analysing millions of records.
+          From AI agents that run business operations to dashboards that changed how teams make decisions.
         </p>
       </ScrollReveal>
 
@@ -97,17 +114,17 @@ const Projects = () => (
                       border: '1px solid var(--accent-mid)',
                     }}
                   >
-                    Featured
+                    Current Project
                   </span>
                   <span
                     className="text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full"
                     style={{
-                      background: '#5FBF7A15',
-                      color: '#5FBF7A',
-                      border: '1px solid #5FBF7A30',
+                      background: '#8b5cf615',
+                      color: '#a78bfa',
+                      border: '1px solid #8b5cf630',
                     }}
                   >
-                    Live Website
+                    AI Agents
                   </span>
                 </div>
 
@@ -141,32 +158,18 @@ const Projects = () => (
                   ))}
                 </div>
 
-                <div className="flex flex-wrap items-center gap-3">
-                  <a
-                    href={project.liveUrl!}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-primary"
-                    style={{ fontSize: '13px', padding: '10px 20px' }}
-                  >
-                    Visit Live Site
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M7 17l9.2-9.2M7 7h10v10" />
-                    </svg>
-                  </a>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <span key={tag} className="chip" style={{ fontSize: '11px' }}>
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <span key={tag} className="chip" style={{ fontSize: '11px' }}>
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               </div>
             ) : (
-              <div className="grid md:grid-cols-2 gap-8 items-start">
-                <div className={`${i % 2 === 0 ? 'md:order-2' : ''}`}>
-                  {project.image && (
+              <div className={`${project.image ? 'grid md:grid-cols-2 gap-8 items-start' : 'card card-accent p-8 md:p-10'}`}>
+                {project.image && (
+                  <div className={`${i % 2 === 0 ? 'md:order-2' : ''}`}>
                     <div className="project-image">
                       <img
                         src={project.image}
@@ -177,10 +180,10 @@ const Projects = () => (
                         decoding="async"
                       />
                     </div>
-                  )}
-                </div>
+                  </div>
+                )}
 
-                <div className={`flex flex-col justify-center ${i % 2 === 0 ? 'md:order-1' : ''}`}>
+                <div className={`flex flex-col justify-center ${project.image && i % 2 === 0 ? 'md:order-1' : ''}`}>
                   <p
                     className="text-xs font-semibold tracking-wider uppercase mb-3"
                     style={{ color: 'var(--accent)' }}
@@ -211,12 +214,28 @@ const Projects = () => (
                     ))}
                   </div>
 
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <span key={tag} className="chip" style={{ fontSize: '11px' }}>
-                        {tag}
-                      </span>
-                    ))}
+                  <div className="flex flex-wrap items-center gap-3">
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-primary"
+                        style={{ fontSize: '13px', padding: '10px 20px' }}
+                      >
+                        Visit Live Site
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M7 17l9.2-9.2M7 7h10v10" />
+                        </svg>
+                      </a>
+                    )}
+                    <div className="flex flex-wrap gap-2">
+                      {project.tags.map((tag) => (
+                        <span key={tag} className="chip" style={{ fontSize: '11px' }}>
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>

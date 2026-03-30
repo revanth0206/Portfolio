@@ -2,16 +2,29 @@ import ScrollReveal from './ScrollReveal';
 
 const experiences = [
   {
+    role: 'Business Analyst',
+    company: 'Business Analysis Pvt Ltd (BAPL)',
+    location: 'Brisbane, QLD',
+    period: 'Mar 2026 – Present',
+    headline: 'Building 10+ AI agents to run business operations autonomously',
+    points: [
+      'Designing AI agents in Copilot Studio — each one scoped to a specific business area with its own data pipeline and security boundary',
+      'Wiring up Google Drive to Microsoft 365 through Graph Connectors so agents can read company knowledge without moving files',
+      'Setting up Entra ID security groups so the right people access the right agents — no exceptions',
+      'Mapping out agent-to-agent orchestration in Power Automate so workflows can hand off across teams automatically',
+    ],
+  },
+  {
     role: 'Data Analyst',
     company: 'OZWIND (Q Labour Group Subsidiary)',
     location: 'Brisbane, QLD',
     period: 'Jul 2025 – Sep 2025',
-    headline: 'Automated HR workflows, reducing manual processing by 30%',
+    headline: 'Cut manual HR processing by 30% through automation',
     points: [
-      'Designed integrated Smartsheet–Xero workspace improving visibility and reporting efficiency',
-      'Built a company website with AI-assisted workflows, capturing 120+ expressions of interest in month one',
-      'Facilitated cross-team workshops to gather requirements and define SOPs',
-      'Combined analytics and automation to optimise workforce management',
+      'Built a Smartsheet–Xero integration that gave the team actual visibility into operations for the first time',
+      'Shipped a company website in one day using AI-assisted workflows — it pulled 120+ leads in month one',
+      'Ran cross-team workshops to nail down requirements and write SOPs that people actually followed',
+      'Combined analytics with automation to fix workforce management headaches',
     ],
   },
   {
@@ -19,12 +32,12 @@ const experiences = [
     company: 'TechReady Blocks',
     location: 'Sydney, NSW',
     period: 'Feb 2025 – Jul 2025',
-    headline: 'Delivered $20K+ in cost savings through market analysis across 85K+ companies',
+    headline: 'Saved $20K+ in prospecting costs by digging through 85K+ companies',
     points: [
-      'Built executive Power BI dashboards to prioritise investments and track strategy',
-      'Analysed 2M+ patent and inventor records to uncover emerging technologies',
-      'Achieved 4.6× YouTube viewer retention through data-backed engagement strategies',
-      'Translated technical outputs into business outcomes for cross-functional teams',
+      'Built Power BI dashboards that executives actually used to prioritise investments',
+      'Mined 2M+ patent records to spot emerging technologies before the competition',
+      'Grew YouTube viewer retention by 4.6× with data-backed content strategy',
+      'Translated technical data outputs into language that business teams could act on',
     ],
   },
   {
@@ -32,11 +45,11 @@ const experiences = [
     company: 'The Data Analytics Institute',
     location: 'Sydney, NSW',
     period: 'Oct 2024 – Feb 2025',
-    headline: 'Built interactive dashboard analysing 10,000+ support tickets',
+    headline: 'Built an interactive dashboard across 10,000+ support tickets',
     points: [
-      'Used advanced DAX calculations, drill-through actions, and dynamic visuals',
-      'Identified process bottlenecks in backlog and response times',
-      'Proposed escalation redesigns projected to improve response times by 15–20%',
+      'Got deep into DAX — drill-through actions, dynamic visuals, the lot',
+      'Found backlog and response time bottlenecks that were costing real time',
+      'Proposed escalation redesigns that could cut response times by 15–20%',
     ],
   },
   {
@@ -44,11 +57,11 @@ const experiences = [
     company: 'NRI Australia & New Zealand',
     location: 'Brisbane, QLD',
     period: 'Nov 2022 – May 2023',
-    headline: 'Reduced logistics costs by 15% through data-driven planning',
+    headline: 'Reduced logistics costs by 15% with data-driven planning',
     points: [
-      'Built real-time Excel and Power BI dashboards for project delivery tracking',
-      'Analysed deployment data to forecast resource requirements',
-      'Coordinated cross-departmental communication between clients, engineers, and PMs',
+      'Built real-time dashboards in Excel and Power BI for tracking project delivery',
+      'Used deployment data to forecast what resources we\'d actually need',
+      'Kept clients, engineers, and PMs aligned — which is harder than any technical work',
     ],
   },
   {
@@ -58,9 +71,9 @@ const experiences = [
     period: 'Jan 2021 – May 2022',
     headline: 'Improved student retention by 10% and employment outcomes by 15%',
     points: [
-      'Designed Power BI dashboards tracking student engagement and performance',
-      'Aligned data insights with institutional goals across academic and careers teams',
-      'Delivered analytics to senior leadership for strategic decisions and funding proposals',
+      'Built Power BI dashboards tracking student engagement and academic performance',
+      'Connected data insights with institutional goals across academic and careers teams',
+      'Delivered analytics to senior leadership for funding proposals and strategic planning',
     ],
   },
 ];
@@ -71,10 +84,11 @@ const Experience = () => (
       <ScrollReveal>
         <span className="section-label">Experience</span>
         <h2 className="section-heading mb-4">
-          Where I've <span className="heading-italic">made an impact</span>
+          The{' '}
+          <span className="heading-italic">path here</span>
         </h2>
         <p className="section-subtext mb-16">
-          From Chennai to Brisbane — every role has been about turning data into decisions.
+          Started with spreadsheets in Chennai. Now building AI agents in Brisbane. Every role taught me something I still use.
         </p>
       </ScrollReveal>
 

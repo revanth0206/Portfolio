@@ -14,21 +14,14 @@ const About = () => {
                 border: '1px solid var(--border)',
               }}
             >
-              {/*
-                ===================================================
-                REVANTH: Replace the src below with your headshot.
-                Put your photo in /public/images/headshot.jpg
-                ===================================================
-              */}
               <img
                 src="/images/headshot.jpg"
-                alt="Revanth Bethu — Data & Business Analyst based in Brisbane, Australia"
+                alt="Revanth Bethu — Data & AI Analyst based in Brisbane, Australia"
                 className="w-full h-full object-cover"
                 width="400"
                 height="533"
                 decoding="async"
                 onError={(e) => {
-                  // Fallback if no photo yet
                   const target = e.currentTarget;
                   target.style.display = 'none';
                   target.parentElement!.innerHTML = `
@@ -73,38 +66,36 @@ const About = () => {
           <ScrollReveal delay={0.15} className="md:col-span-3">
             <span className="section-label">About Me</span>
             <h2 className="section-heading">
-              From raw data to <span className="heading-italic">real outcomes</span>
+              Data analyst by trade,{' '}
+              <span className="heading-italic">AI builder by obsession</span>
             </h2>
 
             <div className="space-y-4 mb-10" style={{ color: 'var(--text-secondary)' }}>
               <p className="text-base leading-relaxed">
-                I'm Revanth — a Data & Business Analyst who finds the story hiding in
-                spreadsheets, databases, and messy workflows. I started with a Computer
-                Science degree in India, moved to Brisbane to complete my Master's in
-                Information Technology (Data Analytics) at Griffith University, and have
-                since built a track record of delivering measurable impact across every
-                role I've held.
+                I'm Revanth. I started out doing what most data analysts do — cleaning
+                messy spreadsheets, building dashboards nobody asked for, and trying to
+                convince stakeholders that their gut feeling was wrong (politely). Computer
+                Science degree in India, Master's at Griffith in Brisbane, and a bunch of
+                roles where I got to prove that data actually changes decisions when you
+                present it right.
               </p>
               <p className="text-base leading-relaxed">
-                My work sits at the intersection of <strong style={{ color: 'var(--text-primary)' }}>analytics</strong>,{' '}
-                <strong style={{ color: 'var(--text-primary)' }}>process automation</strong>, and{' '}
-                <strong style={{ color: 'var(--text-primary)' }}>business strategy</strong>.
-                Whether it's cutting 30% off manual HR processing, saving $20K+ in prospecting costs
-                through market analysis, or building dashboards that executives actually use — I focus
-                on outcomes that move the needle.
+                But here's what gets me out of bed now:{' '}
+                <strong style={{ color: 'var(--text-primary)' }}>AI agents</strong>. I'm
+                currently at BAPL building 10+ AI agents using Microsoft Copilot Studio and
+                Power Automate — each one scoped to a specific business function, pulling
+                from Google Drive via Graph Connectors, locked down with Entra ID security
+                groups. It's the kind of work where data, automation, and AI all collide.
               </p>
               <p className="text-base leading-relaxed">
-                Right now, I'm deepening my skills in AI and machine learning — not just
-                as a buzzword, but as a practical toolkit for building smarter systems. My
-                goal is to evolve into an AI-focused consultant who helps businesses adopt
-                intelligent automation and data-driven decision-making.
+                My sweet spot is the gap between "we have data" and "we have an AI system
+                that actually does something useful with it." I'm not chasing buzzwords — I
+                want to build systems that work without someone babysitting them.
               </p>
             </div>
 
             {/* AI Journey box */}
-            <div
-              className="card card-accent p-6 mb-8"
-            >
+            <div className="card card-accent p-6 mb-8">
               <div className="flex items-start gap-4">
                 <div
                   className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
@@ -116,13 +107,14 @@ const About = () => {
                 </div>
                 <div>
                   <h3 className="font-display text-lg mb-2" style={{ color: 'var(--text-primary)' }}>
-                    Growing Into AI
+                    Where I'm headed
                   </h3>
                   <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                    I'm actively exploring predictive analytics, AI-assisted workflow design,
-                    and tools like Databricks ML, Python (scikit-learn, pandas), and LLM-powered
-                    automation. My vision: become the bridge between raw AI capability and
-                    practical business value.
+                    Right now it's Copilot Studio agents and Power Automate orchestration.
+                    Next it's multi-agent workflows where agents hand off tasks to each
+                    other autonomously. The long game? Becoming the person companies call
+                    when they want AI that actually plugs into their existing systems
+                    and delivers ROI — not just a demo.
                   </p>
                 </div>
               </div>

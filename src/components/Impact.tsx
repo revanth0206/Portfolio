@@ -1,30 +1,31 @@
 import ScrollReveal from './ScrollReveal';
+import AnimatedCounter from './AnimatedCounter';
 
 const metrics = [
   {
+    value: '10+',
+    label: 'AI Agents Being Built',
+    context: 'Copilot Studio agents across service delivery, HR, finance & analytics at BAPL',
+  },
+  {
     value: '30%',
-    label: 'Reduction in Manual HR Processing',
-    context: 'Automated onboarding, rostering & payroll at OZWIND',
+    label: 'Manual Work Eliminated',
+    context: 'Automated onboarding, rostering & payroll workflows at OZWIND',
   },
   {
     value: '$20K+',
-    label: 'Prospecting Cost Savings',
+    label: 'Prospecting Costs Saved',
     context: 'Market analysis across 85K+ companies at TechReady Blocks',
   },
   {
     value: '2M+',
-    label: 'Records Analysed',
-    context: 'Patent & inventor data for emerging tech identification',
+    label: 'Records Crunched',
+    context: 'Patent & inventor data mined for emerging tech identification',
   },
   {
     value: '4.6×',
-    label: 'Viewer Retention Increase',
-    context: 'Data-backed YouTube performance optimisation',
-  },
-  {
-    value: '15%',
-    label: 'Logistics Cost Reduction',
-    context: 'Data-driven IT rollout planning at NRI Australia',
+    label: 'Viewer Retention Boost',
+    context: 'Data-backed YouTube content strategy that actually worked',
   },
 ];
 
@@ -37,10 +38,11 @@ const Impact = () => (
             Impact
           </span>
           <h2 className="section-heading">
-            Numbers that <span className="heading-italic">actually matter</span>
+            Not vanity metrics.{' '}
+            <span className="heading-italic">Real outcomes.</span>
           </h2>
           <p className="section-subtext mx-auto">
-            Every role I take, I measure success by real business outcomes — not vanity metrics.
+            I measure every project by what changed after I was done — not what I was busy doing.
           </p>
         </div>
       </ScrollReveal>
@@ -53,7 +55,7 @@ const Impact = () => (
                 i >= 3 ? 'sm:col-span-1' : ''
               }`}
             >
-              <p className="metric-value mb-3">{m.value}</p>
+              <AnimatedCounter value={m.value} className="metric-value mb-3 block" />
               <p className="text-sm font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>
                 {m.label}
               </p>

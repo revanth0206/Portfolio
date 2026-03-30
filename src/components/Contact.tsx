@@ -5,14 +5,25 @@ const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Opens mailto with pre-filled subject and body
-    const subject = encodeURIComponent(`Portfolio Inquiry from ${formData.name}`);
-    const body = encodeURIComponent(`Hi Revanth,\n\n${formData.message}\n\nFrom: ${formData.name}\nEmail: ${formData.email}`);
-    window.open(`mailto:revanthbethu@gmail.com?subject=${subject}&body=${body}`, '_self');
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 4000);
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+          'form-name': 'contact',
+          ...formData,
+        }).toString(),
+      });
+      setSubmitted(true);
+      setFormData({ name: '', email: '', message: '' });
+    } catch {
+      // Fallback to mailto if Netlify form fails
+      const subject = encodeURIComponent(`Portfolio Inquiry from ${formData.name}`);
+      const body = encodeURIComponent(`Hi Revanth,\n\n${formData.message}\n\nFrom: ${formData.name}\nEmail: ${formData.email}`);
+      window.open(`mailto:revanthbethu@gmail.com?subject=${subject}&body=${body}`, '_self');
+    }
   };
 
   return (
@@ -145,7 +156,18 @@ const Contact = () => {
                 <h3 className="font-display text-xl mb-6" style={{ color: 'var(--text-primary)' }}>
                   Send a message
                 </h3>
-                <form onSubmit={handleSubmit} className="space-y-5">
+                <form
+                  name="contact"
+                  method="POST"
+                  data-netlify="true"
+                  netlify-honeypot="bot-field"
+                  onSubmit={handleSubmit}
+                  className="space-y-5"
+                >
+                  <input type="hidden" name="form-name" value="contact" />
+                  <p className="hidden">
+                    <label>Don't fill this out: <input name="bot-field" /></label>
+                  </p>
                   <div>
                     <label
                       htmlFor="name"
@@ -206,7 +228,7 @@ const Contact = () => {
                     className="btn-primary w-full justify-center"
                     style={{ fontSize: '14px' }}
                   >
-                    {submitted ? 'Opening email client...' : 'Send Message'}
+                    {submitted ? 'Message sent!' : 'Send Message'}
                     {!submitted && (
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <path d="M7 17l9.2-9.2M7 7h10v10" />

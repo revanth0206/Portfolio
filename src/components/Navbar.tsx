@@ -12,9 +12,14 @@ const navItems = [
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 40);
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      setScrollProgress(totalHeight > 0 ? (window.scrollY / totalHeight) * 100 : 0);
+    };
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
@@ -30,6 +35,12 @@ const Navbar = () => {
         scrolled ? 'nav-glass' : ''
       }`}
     >
+      {/* Scroll progress bar */}
+      <div
+        className="scroll-progress"
+        style={{ width: `${scrollProgress}%` }}
+      />
+
       <div className="section-wrapper flex items-center justify-between h-16">
         <button
           onClick={() => handleClick('#hero')}

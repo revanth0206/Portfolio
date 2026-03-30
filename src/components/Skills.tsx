@@ -2,13 +2,32 @@ import ScrollReveal from './ScrollReveal';
 
 const skillGroups = [
   {
+    title: 'AI & Agents',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z" />
+        <path d="M12 12v8M8 16h8" />
+      </svg>
+    ),
+    skills: ['Microsoft Copilot Studio', 'AI Agent Design', 'LLM Integration', 'Graph Connectors', 'Prompt Engineering', 'AI-Assisted Development'],
+  },
+  {
+    title: 'Automation & Orchestration',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+      </svg>
+    ),
+    skills: ['Power Automate', 'Workflow Orchestration', 'Smartsheet', 'API Integration', 'Xero', 'Agent-to-Agent Handoffs'],
+  },
+  {
     title: 'Data & Analytics',
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <path d="M18 20V10M12 20V4M6 20v-6" />
       </svg>
     ),
-    skills: ['SQL Querying', 'Python Scripting', 'Data Modelling', 'Data Cleaning', 'Predictive Analysis', 'BigQuery Analytics'],
+    skills: ['SQL', 'Python', 'Data Modelling', 'Predictive Analysis', 'BigQuery', 'Databricks'],
   },
   {
     title: 'Visualisation & Reporting',
@@ -18,43 +37,23 @@ const skillGroups = [
         <path d="M3 9h18M9 21V9" />
       </svg>
     ),
-    skills: ['Power BI', 'Dashboard Design', 'Data Visualisation', 'Business Reporting', 'DAX'],
+    skills: ['Power BI', 'DAX', 'Dashboard Design', 'Data Visualisation', 'Executive Reporting'],
   },
   {
-    title: 'Automation & Integration',
+    title: 'Cloud & Security',
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+        <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 0 1 0 9z" />
       </svg>
     ),
-    skills: ['Workflow Automation', 'Smartsheet', 'API Integration', 'Xero', 'Cloud Platforms'],
-  },
-  {
-    title: 'AI & Emerging Tech',
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <path d="M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z" />
-        <path d="M12 12v8M8 16h8" />
-      </svg>
-    ),
-    skills: ['Databricks ML', 'Python (scikit-learn, pandas)', 'AI-Assisted Workflows', 'LLM Integration', 'Predictive Modelling'],
-  },
-  {
-    title: 'Strategy & Communication',
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
-      </svg>
-    ),
-    skills: ['Stakeholder Engagement', 'Process Optimisation', 'Strategic Planning', 'Project Coordination', 'Cross-functional Collaboration'],
+    skills: ['Microsoft 365 Admin', 'Entra ID', 'Google Cloud', 'Azure', 'Role-Based Access Control'],
   },
 ];
 
 const tools = [
-  'Power BI', 'SQL Server', 'Python', 'Databricks', 'Smartsheet', 'Xero',
-  'Excel (Advanced)', 'BigQuery', 'Git / GitHub', 'VS Code', 'Jupyter', 'Azure',
+  'Copilot Studio', 'Power Automate', 'Power BI', 'SQL Server', 'Python', 'Databricks',
+  'Smartsheet', 'Xero', 'Google Cloud', 'Azure', 'Excel (Advanced)', 'Git / GitHub',
+  'VS Code', 'Jupyter', 'BigQuery',
 ];
 
 const Skills = () => (
@@ -63,10 +62,10 @@ const Skills = () => (
       <ScrollReveal>
         <span className="section-label">Skills</span>
         <h2 className="section-heading mb-4">
-          The <span className="heading-italic">toolkit</span> behind the results
+          The <span className="heading-italic">toolkit</span>
         </h2>
         <p className="section-subtext mb-16">
-          Technical depth paired with business acumen — structured for impact.
+          Data foundations. AI on top. Automation tying it all together.
         </p>
       </ScrollReveal>
 
