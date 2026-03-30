@@ -22,8 +22,11 @@ const About = () => {
               */}
               <img
                 src="/images/headshot.jpg"
-                alt="Revanth Bethu"
+                alt="Revanth Bethu — Data & Business Analyst based in Brisbane, Australia"
                 className="w-full h-full object-cover"
+                width="400"
+                height="533"
+                decoding="async"
                 onError={(e) => {
                   // Fallback if no photo yet
                   const target = e.currentTarget;

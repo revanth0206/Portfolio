@@ -321,6 +321,29 @@ body {
     font-style: italic;
     color: var(--accent);
   }
+
+  /* Contact form inputs */
+  .contact-input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-primary);
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    outline: none;
+    transition: all 0.3s ease;
+  }
+
+  .contact-input::placeholder {
+    color: var(--text-muted);
+  }
+
+  .contact-input:focus {
+    border-color: var(--accent-mid);
+    box-shadow: 0 0 0 3px var(--accent-dim);
+  }
 }
 
 /* Keyframe animations */

@@ -170,8 +170,11 @@ const Projects = () => (
                     <div className="project-image">
                       <img
                         src={project.image}
-                        alt={project.title}
+                        alt={`${project.title} — ${project.subtitle}`}
                         loading="lazy"
+                        width="600"
+                        height="400"
+                        decoding="async"
                       />
                     </div>
                   )}
